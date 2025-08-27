@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Signup - Speed Capital</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    form { max-width: 300px; margin-bottom: 20px; }
+    label, input { display: block; margin-bottom: 10px; width: 100%; }
+    input { padding: 8px; }
+    button { padding: 10px 15px; cursor: pointer; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 15px; }
+    nav a { text-decoration: none; color: #007bff; }
+  </style>
+</head>
+<body>
+  <h1>Login to Speed Capital</h1>
+
+  <!-- Login Form -->
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+
+  <!-- Navigation Links -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Funding & Education</a></li>
+      <li><a href="enquiry.html">Enquiry</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Login signup.html">Login signup</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Simple login check (replace with real logic later)
+      if(username === "admin" && password === "1234") {
+        window.location.href = "../dashboard.html"; // Redirect to dashboard
+      } else {
+        alert("Invalid username or password!");
+      }
+    });
+   
+  </script>
+</body>
+</html>
+<p>&copy; ST10486532</p>
